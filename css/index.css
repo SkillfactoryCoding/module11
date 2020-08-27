@@ -1,107 +1,149 @@
-body {
-    margin: 0;
+* {
+  box-sizing: border-box;
 }
 
-* {
-    font-size: 16px;
-    box-sizing: border-box;
+body {
+  margin: 0;
+  font-size: 16px;
 }
 
 ul[class] {
-    list-style: none;
+  list-style: none;
 }
 
 ul[class],
 li {
-    margin: 0;
-    padding: 0;
-}
-
-.fruits {
-    max-width: 900px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
-
-.fruit {
-    margin: 10px;
-    padding: 10px;
-    width: fit-content;
-    height: 100px;
-    border-radius: 10px;
-}
-
-.fruit_violet {
-    background: #8b00ff;
-}
-
-.fruit_green {
-    background: #84cd1b;
-}
-
-.fruit_carmazin {
-    background: #dc143c;
-}
-
-.fruit_yellow {
-    background: #ffd800;
-}
-
-.fruit_lightbrown {
-    background: #cd853f;
-}
-
-.fruit_info {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: 5px;
-    background: #fff;
-    height: 100%;
-    padding: 10px;
-}
-
-.panel {
-    padding-left: 10px;
+  margin: 0;
+  padding: 0;
 }
 
 button {
-    background-color: #008cba;
-    border: none;
-    color: white;
-    padding: 10px 16px;
-    border-radius: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    max-width: fit-content;
+  background-color: #008cba;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  max-width: fit-content;
 }
 
 input {
-    margin: 5px 10px 5px 0;
-    border: 0;
-    padding: 0 10px;
-    line-height: 36px;
-    display: inline-block;
-    vertical-align: middle;
-    white-space: normal;
-    background: none;
-    background-color: #3cbc8d;
-    color: white;
-    max-width: 200px;
+  margin: 5px 10px 5px 0;
+  border: 0;
+  padding: 0 10px;
+  line-height: 36px;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+  background: none;
+  background-color: #3cbc8d;
+  color: white;
+  max-width: 200px;
 }
 
-.filter_wrapper {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
+main {
 }
 
-span {
-    margin: 5px 10px 5px 0;
+/* Панель управления */
+.panel__wrapper {
 }
 
-.some {
-    margin-bottom: 5px;
+/* Панель управления: перемешивание элементов*/
+.shuffle__wrapper {
+}
+
+/* Панель управления: фильтрация элементов*/
+.filter__wrapper {
+}
+
+.filter__fields {
+}
+
+.filter__field {
+}
+
+/* Панель управления: сортировка элементов */
+.sort__wrapper {
+}
+
+.sort__info {
+}
+
+.sort__line {
+}
+
+.sort__kind {
+}
+
+.sort__panel {
+}
+
+.sort__change__btn {
+}
+
+.sort__action__btn {
+}
+
+/* Панель управления: добавление элемента */
+.add__wrapper {
+}
+
+.add__fields {
+}
+
+.add__field {
+}
+
+.add__action__btn {
+}
+
+/* Список экзотических фруктов */
+.fruits__wrapper {
+}
+
+.fruits__list {
+  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.fruit__item {
+  margin: 10px;
+  padding: 10px;
+  width: fit-content;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.fruit_violet {
+  background: #8b00ff;
+}
+
+.fruit_green {
+  background: #84cd1b;
+}
+
+.fruit_carmazin {
+  background: #dc143c;
+}
+
+.fruit_yellow {
+  background: #ffd800;
+}
+
+.fruit_lightbrown {
+  background: #cd853f;
+}
+
+.fruit_info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  background: #fff;
+  height: 100%;
+  padding: 10px;
 }
