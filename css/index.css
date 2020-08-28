@@ -4,7 +4,8 @@
 
 body {
   margin: 0;
-  font-size: 16px;
+  font-size: 14px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 ul[class] {
@@ -18,9 +19,12 @@ li {
 }
 
 button {
+  margin-top: 10px;
   background-color: #008cba;
   border: none;
   color: white;
+  font-size: 14px;
+  font-family: 'Courier New', Courier, monospace;
   padding: 10px 16px;
   border-radius: 10px;
   text-align: center;
@@ -44,70 +48,56 @@ input {
 }
 
 main {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  max-height: 100vh;
+}
+
+.wrapper__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 /* Панель управления */
 .panel__wrapper {
+  flex-basis: 25%;
+  max-height: inherit;
+  overflow: hidden;
+  background: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Панель управления: перемешивание элементов*/
-.shuffle__wrapper {
+.panel__devtools {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/* Панель управления: фильтрация элементов*/
-.filter__wrapper {
-}
-
-.filter__fields {
-}
-
-.filter__field {
-}
-
-/* Панель управления: сортировка элементов */
-.sort__wrapper {
-}
-
-.sort__info {
-}
-
-.sort__line {
-}
-
-.sort__kind {
-}
-
-.sort__panel {
-}
-
-.sort__change__btn {
-}
-
-.sort__action__btn {
-}
-
-/* Панель управления: добавление элемента */
-.add__wrapper {
-}
-
-.add__fields {
-}
-
-.add__field {
-}
-
-.add__action__btn {
+.line {
+  margin-top: 10px;
 }
 
 /* Список экзотических фруктов */
 .fruits__wrapper {
+  flex-basis: 75%;
+  background: #fff;
+  max-height: inherit;
+  overflow: hidden;
 }
 
 .fruits__list {
   max-width: 900px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
+  max-height: inherit;
+  overflow-y: auto;
 }
 
 .fruit__item {
@@ -138,7 +128,7 @@ main {
   background: #cd853f;
 }
 
-.fruit_info {
+.fruit__info {
   display: flex;
   justify-content: center;
   flex-direction: column;
