@@ -19,6 +19,7 @@ li {
 }
 
 button {
+  cursor: pointer;
   margin-top: 10px;
   background-color: #008cba;
   border: none;
@@ -121,6 +122,10 @@ main {
 
 .fruit_yellow {
   background: #ffd800;
+}
+
+.fruit_grey {
+  background: grey;  
 }
 
 .fruit_lightbrown {
