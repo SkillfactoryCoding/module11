@@ -21,11 +21,6 @@ let fruitsJSON = `[
 ]`;
 
 const arrLiClassNames = ['fruit_violet', 'fruit_green', 'fruit_carmazin', 'fruit_yellow', 'fruit_lightbrown'];
-//const arrText1 = ['index: 0', 'index: 1', 'index: 2', 'index: 3', 'index: 4'];
-const arrText1 = ['color: фиолетовый', 'color: зеленый', 'color: розово-красный', 
-                  'color: Желтый', 'color: светло-коричневый'];
-const arrText2 = ['kind: Мангустин', 'kind: Дуриан', 'kind: Личи', 'kind: Карамбола', 'kind: Тамаринд'];
-const arrText3 = ['weight (кг): 13', 'weight (кг): 35', 'weight (кг): 17', 'weight (кг): 28', 'weight (кг): 22'];
 
 // преобразование JSON в объект JavaScript
 let fruits = JSON.parse(fruitsJSON);
@@ -33,7 +28,7 @@ let fruits = JSON.parse(fruitsJSON);
 /*** ОТОБРАЖЕНИЕ ***/
 
 // отрисовка карточек
-const display = () => {
+const display = (fruits) => {
   // TODO: очищаем fruitsList от вложенных элементов,
   // чтобы заполнить актуальными данными из fruits
 
@@ -48,27 +43,22 @@ const display = () => {
     fruitsList.appendChild(li);
     li.appendChild(divInfo);
   const fruitInfo = document.querySelectorAll('.fruit__info');
-  let div1 = document.createElement('div');
-  fruitInfo[i].appendChild(div1);
-    let div2 = document.createElement('div');
-  fruitInfo[i].appendChild(div2);
-    let div3 = document.createElement('div');
-  fruitInfo[i].appendChild(div3);
-  let div4 = document.createElement('div');
-  fruitInfo[i].appendChild(div4);
-    let text1 = document.createTextNode(`index: ${i}`);
-    let text2 = document.createTextNode(arrText1[i]);
-    let text3 = document.createTextNode(arrText2[i]);
-    let text4 = document.createTextNode(arrText3[i]);
-    div1.appendChild(text1);
-    div2.appendChild(text2);
-    div3.appendChild(text3);
-    div4.appendChild(text4);
+    let text;  
+    for(let j = 0; j <= fruits.length; j++) {
+      let div = document.createElement('div');
+       fruitInfo[i].appendChild(div);
+       if(j === 0) {text = document.createTextNode(`index: ${i}`);}
+       else if(j === 1) { text = document.createTextNode(Object.keys(fruits[i])[j - 1] + ': ' + fruits[i].kind); }
+       else if(j === 2) { text = document.createTextNode(Object.keys(fruits[i])[j - 1] + ': ' + fruits[i].color); }
+       else if(j === 3) { text = document.createTextNode(Object.keys(fruits[i])[j - 1] + ' (кг): ' + 
+                          fruits[i].weight); }
+       div.appendChild(text);
+    }
   }
 };
 
 // первая отрисовка карточек
-display();
+display(fruits);
 
 /*** ПЕРЕМЕШИВАНИЕ ***/
 
