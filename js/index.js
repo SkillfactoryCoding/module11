@@ -20,6 +20,13 @@ let fruitsJSON = `[
   {"kind": "Тамаринд", "color": "светло-коричневый", "weight": 22}
 ]`;
 
+const arrLiClassNames = ['fruit_violet', 'fruit_green', 'fruit_carmazin', 'fruit_yellow', 'fruit_lightbrown'];
+//const arrText1 = ['index: 0', 'index: 1', 'index: 2', 'index: 3', 'index: 4'];
+const arrText1 = ['color: фиолетовый', 'color: зеленый', 'color: розово-красный', 
+                  'color: Желтый', 'color: светло-коричневый'];
+const arrText2 = ['kind: Мангустин', 'kind: Дуриан', 'kind: Личи', 'kind: Карамбола', 'kind: Тамаринд'];
+const arrText3 = ['weight (кг): 13', 'weight (кг): 35', 'weight (кг): 17', 'weight (кг): 28', 'weight (кг): 22'];
+
 // преобразование JSON в объект JavaScript
 let fruits = JSON.parse(fruitsJSON);
 
@@ -33,6 +40,30 @@ const display = () => {
   for (let i = 0; i < fruits.length; i++) {
     // TODO: формируем новый элемент <li> при помощи document.createElement,
     // и добавляем в конец списка fruitsList при помощи document.appendChild
+    let li = document.createElement('li');
+    let divInfo = document.createElement('div');
+    li.classList.add('fruit__item');
+    li.classList.add(arrLiClassNames[i]);
+    divInfo.classList.add('fruit__info');
+    fruitsList.appendChild(li);
+    li.appendChild(divInfo);
+  const fruitInfo = document.querySelectorAll('.fruit__info');
+  let div1 = document.createElement('div');
+  fruitInfo[i].appendChild(div1);
+    let div2 = document.createElement('div');
+  fruitInfo[i].appendChild(div2);
+    let div3 = document.createElement('div');
+  fruitInfo[i].appendChild(div3);
+  let div4 = document.createElement('div');
+  fruitInfo[i].appendChild(div4);
+    let text1 = document.createTextNode(`index: ${i}`);
+    let text2 = document.createTextNode(arrText1[i]);
+    let text3 = document.createTextNode(arrText2[i]);
+    let text4 = document.createTextNode(arrText3[i]);
+    div1.appendChild(text1);
+    div2.appendChild(text2);
+    div3.appendChild(text3);
+    div4.appendChild(text4);
   }
 };
 
